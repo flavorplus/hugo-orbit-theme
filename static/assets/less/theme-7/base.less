@@ -25,7 +25,7 @@ hr {
 a {
     //color: darken(@theme-color, 15%);
     color: @text-color-secondary;
-    .transition (all 0.4s ease-in-out);
+    .transition(all 0.4s ease-in-out);
 
     &:hover {
         text-decoration: underline;
@@ -55,7 +55,7 @@ p {
     background: @theme-color;
     position: absolute;
     left: 0;
-    width: 240px;
+    width: @sidebar-width;
     height: 100%;
     min-height: 800px;
     color: #fff;
@@ -69,7 +69,9 @@ p {
 
     .profile-container {
         padding: 30px;
+        width: 90%;
         background: @profile-color;
+        .box-shadow(0 0 20px rgba(0, 0, 0, 0.3));
         text-align: center;
         color: #fff;
     }
@@ -190,7 +192,7 @@ p {
 .main-wrapper {
     background: #fff;
     padding: 60px;
-    padding-left: 300px;
+    padding-left: @sidebar-width + 60px;
 
     .section-title {
         text-transform: uppercase;
